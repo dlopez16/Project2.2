@@ -11,56 +11,55 @@
 
 
 <body id="background">
-  <h1 id="titulo">Welcome To Trivia Masters</h1>
-  <h4 id="introtxt">I will testing you knowledge in horror movies</h4>
-  <h5>Begin by Logging In</h3> 
+  <h1 id="titulo">Gallery</h1>
+  <h4 id="introtxt">Experienc Horror in many ways</h3> 
 
-  {{!-- <h4> Proceed at your own risk.</h4> --}}
+  <h4> Proceed at your own risk.</h4>]
 
-{{!-- 
- <div class="carousel">
+
+ <!-- <div class="carousel">
     <a class="carousel-item" href="#one!"><img src="http://static.srcdn.com/wp-content/uploads/saw-legacy-8-directors.jpg"></a>
     <a class="carousel-item" href="#two!"><img src="http://www1.pictures.zimbio.com/mp/7dZex7WrrUhx.jpg"></a>
     <a class="carousel-item" href="#three!"><img src="https://i.ytimg.com/vi/lpqtLlzCA3M/maxresdefault.jpg"></a>
     <a class="carousel-item" href="#four!"><img src="http://static.srcdn.com/wp-content/uploads/saw-legacy-8-directors.jpg"></a>
     <a class="carousel-item" href="#five!"><img src="http://allhdwallpapers.com/wp-content/uploads/2015/04/the-exorcist-5.jpg"></a>
-  </div> --}}
+  </div> -->
 
 
-    {{!-- <div class="slider img0">
+    <div class="slider img0">
     <ul class="slides">
       <li>
-        <img class = "img1" src="http://www1.pictures.zimbio.com/mp/7dZex7WrrUhx.jpg"> <!-- random image -->
+        <img class = "img1" src="http://www1.pictures.zimbio.com/mp/7dZex7WrrUhx.jpg"> 
         <div class="caption center-align">
           <h3>This is our big Tagline!</h3>
           <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
         </div>
       </li>
-      <li>
-        <img class="img2"src="https://i.ytimg.com/vi/lpqtLlzCA3M/maxresdefault.jpg"> <!-- random image -->
+      <!-- <li>
+        <img class="img2"src="https://i.ytimg.com/vi/lpqtLlzCA3M/maxresdefault.jpg"> 
         <div class="caption left-align">
           <h3>Left Aligned Caption</h3>
           <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
         </div>
       </li>
       <li>
-        <img src="http://static.srcdn.com/wp-content/uploads/saw-legacy-8-directors.jpg"> <!-- random image -->
+        <img src="http://static.srcdn.com/wp-content/uploads/saw-legacy-8-directors.jpg"> 
         <div class="caption right-align">
           <h3>Right Aligned Caption</h3>
           <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
         </div>
       </li>
       <li>
-        <img src="http://allhdwallpapers.com/wp-content/uploads/2015/04/the-exorcist-5.jpg"> <!-- random image -->
+        <img src="http://allhdwallpapers.com/wp-content/uploads/2015/04/the-exorcist-5.jpg"> 
         <div class="caption center-align">
           <h3>This is our big Tagline!</h3>
           <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
         </div>
-      </li>
+      </li> -->
     </ul>
-  </div> --}}
-
- {{!-- <div class="row">
+  </div>
+<div id="row2"
+ <div class="row">
         <div class="col s6 m4">
           <div class="card">
             <div class="card-image">
@@ -91,14 +90,14 @@
               <a href="http://gamerant.com/6-best-upcoming-vr-horror-games-666/">Upcoming Horror VR Games</a>
             </div>
           </div>
-        </div> --}}
+        </div>
 
 
 
 
 
 
-        {{!-- <div class="col s6 m4">
+        <div class="col s6 m4">
           <div class="card">
             <div class="card-image">
               <iframe width="611" height="405" src="https://www.youtube.com/embed/Qsna1ChGt0E" frameborder="0" allowfullscreen></iframe>
@@ -117,33 +116,11 @@
 
 
       </div>
-      --}}
-{{!-- Log-In Page --}}
-  <div class="container">
-      <div class="box">
-      <div>
-        {{!-- <p id="login"><strong>Please login below</strong></p> --}}
-
-        <form action="/login" method="post" class="form-inline">
-          <div>
-              <input class="btn input-group" placeholder="Enter Username" type="text" name="username"/>
-          </div>
-          <div>
-            <input class="btn input-group" placeholder="Password" type="password" name="password"/>
-          </div>
-
-
-          <button type="submit" value="Log In" class="btn btn-primary">Sign in</button>
-        </form>
-        <a href="/signup"><p id="member">Not a member?</p></a>
-      </div>
-      </div> 
-    </div>
+     
+</div>
       
 
-      <div class="intro">
-<iframe width="600" height="300" src="https://www.youtube.com/embed/xyz00CNzTrE?autoplay=1" frameborder="0" allowfullscreen volume="0"></iframe>
-</div>
+      
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
   <script>
@@ -151,7 +128,7 @@
       $('.carousel').carousel();
     });
         $(document).ready(function(){
-        $('.slider').slider();
+        $('.slider').slider({fullscreen:true});
       });
   </script>
 </body>

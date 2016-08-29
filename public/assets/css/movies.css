@@ -1,8 +1,10 @@
 #background
 {
-  background-color: #3F8BFA;
+  background-color: #212121;
 }
-
+a#profile{
+  margin-left: 90%;
+}
 .input-group
 {
   margin-top: 10px;
@@ -13,17 +15,16 @@
   margin-top: 10px;
 }
 
-#triviaQuestions
-{
-  background-color: yellow;
+.intro{
+    margin-left: 651px;
+    margin-top: 20px;
 }
-
 .container
 {
   text-align: center;
   font-family: cursive;
-  background-color: #bbbb18;
-  width: 50%;
+  background-color: #4a148c;
+  width: 30%;
   padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 10px;
@@ -32,7 +33,37 @@
 #titulo
 {
   text-align: center;
-  font-family: Comic Sans MS;
+  font-family: 'Nosifer', cursive;
+  color: #d50000;
+}
+
+#container2{
+  background-color: #ff6d00;
+    width: 50%;
+    height: 450px;
+    margin-left: 25%;
+}
+
+
+#slideshow{
+  width: 50%;
+}
+/*#btn{
+  margin-left: 90%;*/
+}
+h4{
+font-size: 2.28rem;
+    line-height: 110%;
+    margin: 1.14rem 0 0.912rem 0;
+    text-align: center;
+    color: white;
+}
+h5 {
+    font-size: 1.64rem;
+    line-height: 110%;
+    margin: 0.82rem 0 0.656rem 0;
+    text-align: center;
+    color: white;
 }
 
 #login
@@ -46,13 +77,31 @@
 }
 
 
+#row2{
+  margin-top: 40px;
+}
+}
 
+.img1{
+  padding-bottom: 40%;
+}
+.img2{
+  padding-bottom: 30%;
+}
+
+@media (min-width: 400px)
+.container {
+    text-align: center;
+    width:20%;
+    margin: 0 auto;
+
+}
 
 
 @media (min-width: 768px)
 .container {
     text-align: center;
-    width:800px;
+    width:20%;
     margin: 0 auto;
 }
 
@@ -61,6 +110,6 @@
 @media (min-width: 992px)
 .container {
     text-align: center;
-    width:800px;
+    width:20%;
     margin: 0 auto;
 }

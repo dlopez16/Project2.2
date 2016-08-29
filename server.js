@@ -7,16 +7,22 @@ var methodOverride = require('method-override');
 var bcrypt = require('bcrypt-nodejs');
 var passport = require('passport');
 var session = require('express-session');
-var models = require('./models');
 var SequelizeStore = require('connect-session-sequelize')(session.Store);
 var LocalStrategy = require('passport-local').Strategy;
-
 
 var db = require('./models/index.js').sequelize;
 db.sync();
 var User = require('./models').User;
 
 var app = express(); // DUH!
+
+/*MySQL connection initialization*/
+// var connection = mysql.createConnection({
+//   host     : 'localhost',
+//   user     : 'root',
+//   password : '',
+//   database : 'movieClip'
+// });
 
 app.use(bodyParser.urlencoded({ extended: false }))
 
@@ -27,13 +33,23 @@ app.set('view engine', 'handlebars');
 //Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static(__dirname + '/public'));
 
+// connection.connect(function (err) {
+//   if (err) {
+//     console.error('error connecting: ' + err.stack);
+//     return;
+//   }
+//   console.log('connected as id ' + connection.threadId);
+// });
+
+
+
 //--------------------
 //--------------------
 // PASSPORT
 //--------------------
 //--------------------
 
-/*passport.use('local', new LocalStrategy(
+passport.use('local', new LocalStrategy(
   function(username, password, done) {
     User.findOne( { where: { username: username} } ).then(function(user) {
       if (!user) {
@@ -84,86 +100,36 @@ app.use(session({
   saveUninitialized: true
 }));
 app.use(passport.initialize());
-app.use(passport.session());*/
+app.use(passport.session());
 
 /*******************************************************/
 
+
 app.get('/', function(req, res) {
-  var questionsArr;
-  var answerArr;
-  var newArray;
-  models.Question.findAll().then(function (questions){
-    // res.render('home', { questions: questions});
-    questionsArr = questions;
-  }).then(function() {
-    models.Answer.findAll().then(function (answer){
-      answerArr = answer; // Everything working up to this point
-      
-
-      
-
-
-      var data = {
-        questions: questionsArr,
-        answers: answer
-      }
-      res.render('home', data);
-    })
-  });
-})
-
-/*app.get('/', function(req, res) 
   if (req.user) {
     res.render('home', { name: req.user.username});
   } else {
     res.redirect('/login');
+    console.log("Unable to login!");
   }
-})*/
-
-/*app.get('/', function(req, res) {
-  res.render('home');
-})*/
-
-/*app.get('/login', function(req, res) {
-  res.render('login');
 })
 
-app.get('/error', function(req, res) {
-  res.render('error');
-})*/
+app.get('/signup', function(req, res) {
+  res.render('signup');
+})
+app.get('/gallery', function(req, res) {
+  res.render('gallery');
+})
+app.get('/login', function(req, res) {
+  res.render('login');
+})
+app.get('/home', function(req, res) {
+  res.render('home');
+})
 
-/*app.post('/login', passport.authenticate('local', { successRedirect: '/', failureRedirect: '/error'}));
-*/
+app.post('/login', passport.authenticate('local', { successRedirect: '/', failureRedirect: '/login'}));
 
 
 var PORT = 3000;
 app.listen(PORT);
 console.log('Hackin\' n Slacking on PORT ' + PORT);
-
-
-// Fake Schema
-
-// Questions
-//   1  | "when was ben hur made"
-// id | query |
-
-// Answers
-// 1  | "1974"  | false
-// 2  | "1977"  | true
-// id | info  | status  |
-
-
-// QuestionAnswers
-// 
-// qID    | aID   
-  // 1    | 1
-  // 1    | 2
-
-
-  // UserAnswers
-  // uID| aID
-  // 1| 2
-
-/*var q1 = Questions.getOne({where:{id: 1}})
-  q1.getAnswers({where:{status: true}})
-  q1.getAnswers();*/
