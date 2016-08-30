@@ -1,17 +1,16 @@
-#background
-{
+#background{
   background-color: #212121;
 }
+
 a#profile{
   margin-left: 90%;
 }
-.input-group
-{
+
+.input-group{
   margin-top: 10px;
 }
 
-.btn-primary
-{
+.btn-primary{
   margin-top: 10px;
 }
 
@@ -19,8 +18,7 @@ a#profile{
     margin-left: 651px;
     margin-top: 20px;
 }
-.container
-{
+.container{
   text-align: center;
   font-family: cursive;
   background-color: #4a148c;
@@ -30,8 +28,7 @@ a#profile{
   border-radius: 10px;
 }
 
-#titulo
-{
+#titulo{
   text-align: center;
   font-family: 'Nosifer', cursive;
   color: #d50000;
@@ -44,13 +41,19 @@ a#profile{
     margin-left: 25%;
 }
 
+img#midimg{
+  height: 500px;
+}
 
-#slideshow{
-  width: 50%;
+h2{
+font-size: 2.28rem;
+    line-height: 110%;
+    margin: 1.14rem 0 0.912rem 0;
+    text-align: center;
+    color: white;
 }
-/*#btn{
-  margin-left: 90%;*/
-}
+
+
 h4{
 font-size: 2.28rem;
     line-height: 110%;
@@ -58,6 +61,7 @@ font-size: 2.28rem;
     text-align: center;
     color: white;
 }
+
 h5 {
     font-size: 1.64rem;
     line-height: 110%;
@@ -80,14 +84,13 @@ h5 {
 #row2{
   margin-top: 40px;
 }
-}
 
-.img1{
+./*img1{
   padding-bottom: 40%;
 }
 .img2{
   padding-bottom: 30%;
-}
+}*/
 
 @media (min-width: 400px)
 .container {

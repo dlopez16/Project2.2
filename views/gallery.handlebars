@@ -11,10 +11,37 @@
 
 
 <body id="background">
-  <h1 id="titulo">Gallery</h1>
-  <h4 id="introtxt">Experienc Horror in many ways</h3> 
 
-  <h4> Proceed at your own risk.</h4>]
+
+<div>
+        <a id="profile" href="#" data-activates="slide-out" class="btn button-collapse orange accent-4">
+        Profile</a>
+       
+      <h1 id="titulo">Gallery</h1>
+    </div>
+
+   
+      <h2> Thanks For Playing</h2>
+
+
+      <ul id="slide-out" class="side-nav">
+          <li><div class="userView">
+            <img class="background" src="https://wallpaperscraft.com/image/space_sky_stars_79233_602x339.jpg">
+            <a href="#!user"><img class="circle" src="http://zblogged.com/wp-content/uploads/2015/11/21.jpg"></a>
+            <a href="#!name"><span class="white-text name">John Doe</span></a>
+            <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+          </div></li>
+            <li><a href="#!"><i class="material-icons">cloud</i>Edit Profile</a></li>
+            <li><a href="#!">Scores</a></li>
+            <li><div class="divider"></div></li>
+            <li><a class="subheader">Score Leaders</a></li>
+            <li><a class="waves-effect" href="#!">Friends</a></li>
+      </ul>
+ 
+  <h4>Click on the links below to explore more Horror</h4> 
+
+
+ 
 
 
  <!-- <div class="carousel">
@@ -26,7 +53,7 @@
   </div> -->
 
 
-    <div class="slider img0">
+<!--     <div class="slider img0">
     <ul class="slides">
       <li>
         <img class = "img1" src="http://www1.pictures.zimbio.com/mp/7dZex7WrrUhx.jpg"> 
@@ -35,7 +62,7 @@
           <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
         </div>
       </li>
-      <!-- <li>
+      <li>
         <img class="img2"src="https://i.ytimg.com/vi/lpqtLlzCA3M/maxresdefault.jpg"> 
         <div class="caption left-align">
           <h3>Left Aligned Caption</h3>
@@ -55,10 +82,10 @@
           <h3>This is our big Tagline!</h3>
           <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
         </div>
-      </li> -->
+      </li>
     </ul>
-  </div>
-<div id="row2"
+  </div> -->
+<div id="row2">
  <div class="row">
         <div class="col s6 m4">
           <div class="card">
@@ -67,11 +94,10 @@
               <span class="card-title">Upcoming Horror Movies</span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <p >Discover Upcoming Horror Movies.</p>
             </div>
             <div class="card-action">
-              <a href="http://www.imdb.com/list/ls056154538/">Upcoming Horror Movies</a>
+              <a href="http://www.imdb.com/list/ls056154538/">Watch List!</a>
             </div>
           </div>
         </div>
@@ -79,23 +105,21 @@
         <div class="col s6 m4">
           <div class="card">
             <div class="card-image">
-              <iframe width="611" height="405" src="https://www.youtube.com/embed/k10ETZ41q5o" frameborder="0" allowfullscreen></iframe>
-              <span class="card-title">Lets Play a Game</span>
+             <img class="midimg" src="https://www.universalorlando.com/Images/HHN26_update_BB_tcm13-57696.jpg">
+              <span class="card-title">Halloween Horror Night</span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <p>On select nights from September 16th through October 31st, 2016, the streets of Universal Studios Florida® theme park come alive with hordes of horrifying mutants, monsters and maniacs. Nobody creates a more nightmarish Halloween event filled with truly original scares and authentic horror movie moments. You can explore terrifying haunted houses, make your way through multiple scare zones where creatures lurk around every turn, enjoy outrageous live shows, and experience many of the park’s most exciting rides and attractions.                                                                                              </p>
             </div>
             <div class="card-action">
-              <a href="http://gamerant.com/6-best-upcoming-vr-horror-games-666/">Upcoming Horror VR Games</a>
+              <a href="http://gamerant.com/6-best-upcoming-vr-horror-games-666/">Buy Tickets!
+
+
+
+              </a>
             </div>
           </div>
         </div>
-
-
-
-
-
 
         <div class="col s6 m4">
           <div class="card">
@@ -104,19 +128,14 @@
               <span class="card-title">Expecience VR Horror Games</span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <p>Experience Horror with the new VR Experience </p>
             </div>
             <div class="card-action">
               <a href="http://gamerant.com/6-best-upcoming-vr-horror-games-666/">Upcoming Horror VR Games</a>
             </div>
           </div>
         </div>
-
-
-
       </div>
-     
 </div>
       
 
@@ -124,24 +143,16 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
   <script>
-   $(document).ready(function(){
-      $('.carousel').carousel();
-    });
-        $(document).ready(function(){
-        $('.slider').slider({fullscreen:true});
-      });
+     
+    $( document ).ready(function(){
+      $(".button-collapse").sideNav();
+          });
+      $('.btn button-collapse').sideNav({
+          menuWidth: 300, // Default is 240
+          edge: 'right', // Choose the horizontal origin
+          closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+           }
+    );
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-

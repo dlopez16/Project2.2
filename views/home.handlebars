@@ -3,118 +3,55 @@
 <head>
   <title>Movie Trivia</title>
   <link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
-  
+  {{!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> --}}
+  <link rel="stylesheet" href="../assets/css/movies.css" type="text/css"/>
   <link href="https://fonts.googleapis.com/css?family=Nosifer" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-<link rel="stylesheet" href="../assets/css/movies.css" type="text/css"/>
+
 </head>
 
- 
-
-
-
- 
 <body id="background">
 
-
-  <a id="profile" href="#" data-activates="slide-out" class="btn button-collapse orange accent-4">Profile</a>
-
-        <ul id="slide-out" class="side-nav">
+     <div>
+        <a id="profile" href="#" data-activates="slide-out" class="btn button-collapse orange accent-4">
+        Profile</a>
+       
+        <h1 id="titulo">Welcome To Trivia Masters</h1>
+    </div>
+      <ul id="slide-out" class="side-nav">
           <li><div class="userView">
             <img class="background" src="https://wallpaperscraft.com/image/space_sky_stars_79233_602x339.jpg">
             <a href="#!user"><img class="circle" src="http://zblogged.com/wp-content/uploads/2015/11/21.jpg"></a>
             <a href="#!name"><span class="white-text name">John Doe</span></a>
             <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
           </div></li>
-          <li><a href="#!"><i class="material-icons">cloud</i>Edit Profile</a></li>
-          <li><a href="#!">Scores</a></li>
-          <li><div class="divider"></div></li>
-          <li><a class="subheader">Score Leaders</a></li>
-          <li><a class="waves-effect" href="#!">Friends</a></li>
-        </ul>
-
-
-
-
-<div id='container2'>
-      <div id='title'>
-        <h3>Question 1</h3>
-        <h5> Choose the best answer to the following questions.</h5>
-      </div>
-        <br/>
-        <div id='quiz'></div>
-</div>
-
-
-{{!-- <nav>
-
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Logo</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html"><i class="material-icons left">search</i>Link with Left Icon</a></li>
-        <li><a href="badges.html"><i class="material-icons right">view_module</i>Profile</a></li>
+            <li><a href="#!"><i class="material-icons">cloud</i>Edit Profile</a></li>
+            <li><a href="#!">Scores</a></li>
+            <li><div class="divider"></div></li>
+            <li><a class="subheader">Score Leaders</a></li>
+            <li><a class="waves-effect" href="#!">Friends</a></li>
       </ul>
+
+
+    <div class="container">
+        
+      <div id="triviaQuestions">
+        {{#each questions}}
+          <h2>
+      	   {{text}}
+         </h2>
+          
+        {{/each}}
+        <ol>
+          {{#each answers}}
+                <li>
+                  {{text}}
+                </li>
+          {{/each}}
+          </ol>
+      </div>
     </div>
-  </nav> --}}
 
-
- {{!-- <ul id="slide-out" class="side-nav">
-    <li><div class="userView">
-      <img class="background" src="images/office.jpg">
-      <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
-      <a href="#!name"><span class="white-text name">John Doe</span></a>
-      <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
-    </div></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-    <li><a href="#!">Second Link</a></li>
-    <li><div class="divider"></div></li>
-    <li><a class="subheader">Subheader</a></li>
-    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-  </ul>
-  <a href="#" data-activates="slide-out" class="waves-effect waves-light btn">button<i class="material-icons">menu</i></a>
-         --}}
-
-
- {{!--  <h1>You logged in successfully! {{name}}!</h1>
-  --}}
-
-{{!-- 
-<div id="slideshow">
-    <div class="slider img0">
-    <ul class="slides">
-      <li>
-        <img class = "img1" src="http://www1.pictures.zimbio.com/mp/7dZex7WrrUhx.jpg"> 
-        <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-        <img class="img2"src="https://i.ytimg.com/vi/lpqtLlzCA3M/maxresdefault.jpg"> 
-        <div class="caption left-align">
-          <h3>Left Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="http://static.srcdn.com/wp-content/uploads/saw-legacy-8-directors.jpg"> 
-        <div class="caption right-align">
-          <h3>Right Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="http://allhdwallpapers.com/wp-content/uploads/2015/04/the-exorcist-5.jpg"> 
-        <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
-   --}}
-      
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
   <script>
@@ -124,7 +61,6 @@
         $(document).ready(function(){
         $('.slider').slider();
       });
-
 $( document ).ready(function(){
 $(".button-collapse").sideNav();
 });
@@ -135,16 +71,7 @@ $(".button-collapse").sideNav();
        // Show sideNav
     }
   );
-
   
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
